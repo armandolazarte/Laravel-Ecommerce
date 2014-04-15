@@ -21,10 +21,7 @@ class ProductsController extends \BaseController {
 	public function index()
 	{
 
-		dd($this->product->getAll());
-		$products = Product::all();
-
-		return View::make('products.index', compact('products'));
+		return $this->product->getAll();
 	}
 
 	/**

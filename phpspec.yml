@@ -1,6 +1,6 @@
 suites:
-	birdieland_suite:
-		namespace: Birdieland
-		src_path: app
-		spec_path: app
-		spec_prefix: spec
+ birdieland_suite:
+  namespace: Birdieland
+  src_path: app
+  spec_path: app
+  spec_prefix: spec
