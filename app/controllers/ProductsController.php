@@ -1,6 +1,17 @@
 <?php
 
+use Birdieland\Repositories\ProductRepositoryInterface;
+
 class ProductsController extends \BaseController {
+
+	protected $product;
+
+	public function __construct(ProductRepositoryInterface $product)
+	{
+
+		$this->product = $product;
+
+	}
 
 	/**
 	 * Display a listing of products
@@ -9,6 +20,8 @@ class ProductsController extends \BaseController {
 	 */
 	public function index()
 	{
+
+		dd($this->product->getAll());
 		$products = Product::all();
 
 		return View::make('products.index', compact('products'));

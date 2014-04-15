@@ -16,3 +16,5 @@ Route::get('/', function()
 	dd(new Birdieland\Repositories\ProductRepository);
 	return View::make('hello');
 });
+
+Route::resource('product','ProductsController');

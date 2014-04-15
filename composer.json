@@ -15,8 +15,8 @@
             "app/database/seeds",
             "app/tests/TestCase.php"
         ],
-        "psr-0": {
-            "Birdieland": "app/"
+        "psr-4": {
+            "Birdieland\\": "app/Birdieland"
         }
     },
     "scripts": {
@@ -33,11 +33,13 @@
         ]
     },
     "config": {
+        "bin-dir": "vendor/bin",
         "preferred-install": "dist"
     },
     "minimum-stability": "stable",
     "require-dev": {
         "way/generators": "2.*",
-        "fzaninotto/faker": "1.*"
+        "fzaninotto/faker": "1.*",
+        "phpspec/phpspec": "2.0.*@dev"
     }
 }
