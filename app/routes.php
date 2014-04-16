@@ -13,8 +13,7 @@
 
 Route::get('/', function()
 {
-	dd(new Ecommerce\Repositories\ProductRepository);
-	return View::make('hello');
+	return View::make('home');
 });
 
 Route::resource('product','ProductsController');
