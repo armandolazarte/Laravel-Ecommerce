@@ -2,6 +2,7 @@
 
 // Composer: "fzaninotto/faker": "v1.3.0"
 use Faker\Factory as Faker;
+use Ecommerce\Product;
 
 class ProductsTableSeeder extends Seeder {
 
@@ -9,7 +10,7 @@ class ProductsTableSeeder extends Seeder {
 	{
 		$faker = Faker::create();
 
-		foreach(range(1, 10) as $index)
+		foreach(range(1, 20) as $index)
 		{
 			Product::create([
 				'name' => $faker->name,

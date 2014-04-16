@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 /*
 |--------------------------------------------------------------------------
 | Register The Laravel Class Loader
@@ -45,6 +47,11 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 | shown, which includes a detailed stack trace during debug.
 |
 */
+
+App::error(function(ModelNotFoundException $e)
+{
+    return Response::make('Not Found', 404);
+});
 
 App::error(function(Exception $exception, $code)
 {

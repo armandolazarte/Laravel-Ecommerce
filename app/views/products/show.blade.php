@@ -1,1 +1,1 @@
-C:\xampp\htdocs\laravel-ecommerce\app/views/products/show.blade.php
+{{ $item->name }}

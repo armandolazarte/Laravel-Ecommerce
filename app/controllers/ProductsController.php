@@ -21,7 +21,8 @@ class ProductsController extends \BaseController {
 	public function index()
 	{
 
-		return $this->product->getAll();
+		$items = $this->product->paginate();
+		return View::make('products.index', compact('items'));
 	}
 
 	/**
@@ -61,9 +62,9 @@ class ProductsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$product = Product::findOrFail($id);
+		$item = $this->product->find($id);
 
-		return View::make('products.show', compact('product'));
+		return View::make('products.show', compact('item'));
 	}
 
 	/**
