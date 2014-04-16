@@ -16,7 +16,7 @@
             "app/tests/TestCase.php"
         ],
         "psr-4": {
-            "Birdieland\\": "app/Birdieland"
+            "Ecommerce\\": "app/Ecommerce"
         }
     },
     "scripts": {

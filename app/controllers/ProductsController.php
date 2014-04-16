@@ -1,6 +1,6 @@
 <?php
 
-use Birdieland\Repositories\ProductRepositoryInterface;
+use Ecommerce\Repositories\ProductRepositoryInterface;
 
 class ProductsController extends \BaseController {
 

@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	dd(new Birdieland\Repositories\ProductRepository);
+	dd(new Ecommerce\Repositories\ProductRepository);
 	return View::make('hello');
 });
 
