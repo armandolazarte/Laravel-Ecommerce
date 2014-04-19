@@ -1,0 +1,6 @@
+{
+  "name": "Laravel Ecommerce",
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
