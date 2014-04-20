@@ -8,3 +8,5 @@ composer.lock
 .DS_Store
 Thumbs.db
 .sass-cache
+error_log
+access_log

@@ -13,13 +13,13 @@
 
 Route::get('/', function()
 {
-	return View::make('home');
+	return Redirect::to('product');
 });
 
 Route::resource('product','ProductsController');
 
 Route::get('contact', function()
 {
-	return 'Contact';
+	return View::make('contact');
 });
 

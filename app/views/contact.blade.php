@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    
-	Home page
+
+	Contact Me!
 
 @stop
