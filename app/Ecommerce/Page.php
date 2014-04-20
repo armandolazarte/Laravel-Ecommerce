@@ -1,9 +1,19 @@
 <?php namespace Ecommerce;
 
-use Illuminate\Database\Eloquent\Model as Eloquent;
+class Page {
 
-class Page extends Eloquent {
+	protected $title;
+	protected $url;
+	protected $class;
 
-	protected $fillable = [];
+	public function __set($name, $value)
+	{
+		$this->$name = $value;
+	}
+
+	public function __get($name)
+	{
+		return $this->$name;
+	}
 
 }

@@ -1,27 +1,22 @@
 <?php namespace Ecommerce\Repositories;
 
 use Illuminate\Http\Request;
+use Ecommerce\Repositories\PageRepository;
 
 class NavComposer{
 
 	protected $request;
+	protected $page;
 
-	public function __construct(Request $request)
+	public function __construct(Request $request, PageRepository $page)
 	{
 		$this->request = $request;
+		$this->page = $page;
 	}
 	
 	public function compose($view)
 	{
-		$items = [];
-		$current = $this->request->segment(1);
-		foreach(['product' => 'Products','contact' => 'Contact'] as $key => $i){
-			$item['name'] = $i;
-			$item['uri'] = $key;
-			$item['class'] = $key==$current?'active':'';
-			$items[] = $item;
-		}
-		$view->with('navs',$items);
+		$view->with('navs',$this->page->all($this->request->segment(1)));
 	}
 
 }
