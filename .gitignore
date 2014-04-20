@@ -10,3 +10,4 @@ Thumbs.db
 .sass-cache
 error_log
 access_log
+.env.*

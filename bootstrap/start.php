@@ -28,6 +28,7 @@ $env = $app->detectEnvironment(array(
 
 	'local' => array('Liam-PC'),
 	'work' => array('LIAM-PC'),
+	'hunter' => array('hunter')
 
 ));
 
