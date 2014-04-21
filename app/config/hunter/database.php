@@ -23,7 +23,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'database',
+			'database'  => 'birdieland',
 			'username'  => 'root',
 			'password'  => getenv('DB_PASSWORD'),
 			'charset'   => 'utf8',
