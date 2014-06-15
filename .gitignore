@@ -2,7 +2,6 @@
 /vendor
 public/components
 composer.phar
-composer.lock
 .env.local.php
 .env.php
 .DS_Store
@@ -11,3 +10,4 @@ Thumbs.db
 error_log
 access_log
 .env.*
+.idea
