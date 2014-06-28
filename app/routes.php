@@ -13,13 +13,19 @@
 
 Route::get('/', function()
 {
-	return Redirect::to('product');
+	return Redirect::to('products');
 });
 
 Route::group(array('prefix' => 'products'), function()
 {
 	Route::get('', ['as' => 'products.index', 'uses' => 'ProductsController@index']);
-	Route::get('/{url}', ['as' => 'products.show', 'uses' => 'ProductsController@show']);
+	Route::get('{url}', ['as' => 'products.show', 'uses' => 'ProductsController@show']);
+});
+
+Route::group(array('prefix' => 'admin'), function()
+{
+	Route::get('', ['as' => 'admin.dashboard', 'uses' => 'AdminController@index']);
+
 });
 
 Route::get('contact', function()

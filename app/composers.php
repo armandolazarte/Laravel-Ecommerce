@@ -1,3 +1,3 @@
 <?php 
 
-	View::composer('layouts.partials.nav', 'Ecommerce\Repositories\NavComposer');
+	View::composer('layouts.front.partials.nav', 'Ecommerce\Repositories\NavComposer');

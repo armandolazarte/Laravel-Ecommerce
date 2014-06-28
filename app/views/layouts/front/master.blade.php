@@ -13,7 +13,7 @@
 			<div id="logo">
 				<a href="{{ url() }}"><img src="{{ asset('assets/images/logo.png') }}" /></a>
 			</div>
-			@include('layouts.partials.nav')
+			@include('layouts.front.partials.nav')
 		</div>
 	</header>
 	<main>
