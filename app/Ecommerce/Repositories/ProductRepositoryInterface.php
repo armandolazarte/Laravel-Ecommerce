@@ -13,6 +13,8 @@ interface ProductRepositoryInterface {
 
     public function find($id);
 
+	public function findByURL($url);
+
     public function updateWithIdAndInput($id, array $input);
 
     public function destroy($id);

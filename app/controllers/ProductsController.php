@@ -57,12 +57,12 @@ class ProductsController extends \BaseController {
 	/**
 	 * Display the specified product.
 	 *
-	 * @param  int  $id
+	 * @param  string  $url
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($url)
 	{
-		$item = $this->product->find($id);
+		$item = $this->product->findByURL($url);
 
 		return View::make('products.show', compact('item'));
 	}

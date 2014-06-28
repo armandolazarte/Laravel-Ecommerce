@@ -16,7 +16,11 @@ Route::get('/', function()
 	return Redirect::to('product');
 });
 
-Route::resource('product','ProductsController');
+Route::group(array('prefix' => 'products'), function()
+{
+	Route::get('', ['as' => 'products.index', 'uses' => 'ProductsController@index']);
+	Route::get('/{url}', ['as' => 'products.show', 'uses' => 'ProductsController@show']);
+});
 
 Route::get('contact', function()
 {

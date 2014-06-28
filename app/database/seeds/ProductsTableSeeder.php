@@ -14,6 +14,7 @@ class ProductsTableSeeder extends Seeder {
 		{
 			Product::create([
 				'name' => $faker->name,
+				'url' => uniqid(),
 				'image' => 'http://lorempixel.com/640/480/food/',
 				'price' => $faker->randomFloat(2, 1,99),
 				'order' => 0,

@@ -42,6 +42,11 @@ class ProductRepository implements ProductRepositoryInterface{
 
     }
 
+	public function findByURL($url)
+	{
+		return $this->product->where('url', '=', $url)->firstOrFail();
+	}
+
     public function updateWithIdAndInput($id, array $input)
     {
 
