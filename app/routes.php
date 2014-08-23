@@ -22,15 +22,11 @@ Route::group(array('prefix' => 'products'), function()
 	Route::get('{url}', ['as' => 'products.show', 'uses' => 'ProductsController@show']);
 });
 
-Route::group(array('prefix' => 'admin'), function()
-{
-	Route::get('', ['as' => 'admin.dashboard', 'uses' => 'AdminController@index']);
-	Route::get('products', ['as' => 'admin.products.index', 'uses' => 'ProductsAdminController@index']);
-
-});
-
 Route::get('contact', function()
 {
 	return View::make('contact');
 });
+
+/* Admin */
+Route::get('admin/{all}', ['as' => 'admin', 'uses' => 'AdminController@index']);
 

@@ -1,11 +1,16 @@
-<html>
+<html ng-app="eCommerce">
 <head>
+
+    <base href="/admin/" />
+
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{{ asset('components/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css" media="all"/>
 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/holder/2.3.1/holder.js"></script>
 	<script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('components/angular/angular.min.js') }}"></script>
+	<script src="{{ asset('components/angular-route/angular-route.js') }}"></script>
+	<script src="{{ asset('assets/js/app.js') }}"></script>
+	<script src="{{ asset('assets/js/controllers.js') }}"></script>
 </head>
 <body>
 	<header>
@@ -25,15 +30,14 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="#">Products</a></li>
+						<li><a href="products">Products</a></li>
+                    </ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 	</header>
 	<main>
-		<div class="container">
-			@yield('content')
-		</div>
+		<div ng-view></div>
 	</main>
 </body>
 </html>
