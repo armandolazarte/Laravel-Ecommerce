@@ -12,7 +12,7 @@ class PageRepository{
 		$contact = new Page();
 
 		$product->title = 'Products';
-		$product->url = 'product';
+		$product->url = 'products';
 
 		$contact->title = 'Contact';
 		$contact->url = 'contact';
