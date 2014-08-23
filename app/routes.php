@@ -25,6 +25,7 @@ Route::group(array('prefix' => 'products'), function()
 Route::group(array('prefix' => 'admin'), function()
 {
 	Route::get('', ['as' => 'admin.dashboard', 'uses' => 'AdminController@index']);
+	Route::get('products', ['as' => 'admin.products.index', 'uses' => 'ProductsAdminController@index']);
 
 });
 
