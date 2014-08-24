@@ -5,11 +5,19 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{{ asset('components/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{{ asset('components/fontawesome/css/font-awesome.min.css') }}" type="text/css" media="all"/>
 
+    <!-- AngularJS dependencies -->
 	<script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
 	<script src="{{ asset('components/angular/angular.min.js') }}"></script>
+	<script src="{{ asset('components/lodash/dist/lodash.underscore.js') }}"></script>
+	<script src="{{ asset('components/restangular/dist/restangular.min.js') }}"></script>
 	<script src="{{ asset('components/angular-route/angular-route.js') }}"></script>
+	<script src="{{ asset('components/angular-animate/angular-animate.js') }}"></script>
+
+    <!-- Application specific -->
 	<script src="{{ asset('assets/js/app.js') }}"></script>
+	<script src="{{ asset('assets/js/directives.js') }}"></script>
 	<script src="{{ asset('assets/js/controllers.js') }}"></script>
 </head>
 <body>
@@ -37,7 +45,7 @@
 		</nav>
 	</header>
 	<main>
-		<div ng-view></div>
+		<div ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-view></div>
 	</main>
 </body>
 </html>

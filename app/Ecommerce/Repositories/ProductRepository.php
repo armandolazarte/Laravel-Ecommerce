@@ -16,7 +16,7 @@ class ProductRepository implements ProductRepositoryInterface{
 
 	public function all($columns = array('*'))
 	{
-
+		return $this->product->all();
 	}
 
     public function newInstance(array $attributes = array())

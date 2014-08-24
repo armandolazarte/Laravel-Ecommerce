@@ -31,15 +31,16 @@ Route::get('contact', function ()
 Route::group(['prefix' => 'admin'], function ()
 {
 
-	Route::get('{all}', ['as' => 'admin', 'uses' => 'AdminController@index']);
-
 	Route::group(['prefix' => 'api'], function ()
 	{
-		Route::get('products', function ()
-		{
-			return '';
+		Route::group(['prefix' => 'products'], function(){
+			Route::get('', 'ProductsApiController@index');
+			Route::get('{id}', 'ProductsApiController@show');
 		});
 	});
+
+	Route::get('{path?}', ['as' => 'admin', 'uses' => 'AdminController@index'])->where('path', '.+');
+
 });
 
 
