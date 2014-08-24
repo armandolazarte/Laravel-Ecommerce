@@ -11,22 +11,35 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', function ()
 {
 	return Redirect::to('products');
 });
 
-Route::group(array('prefix' => 'products'), function()
+Route::group(array('prefix' => 'products'), function ()
 {
 	Route::get('', ['as' => 'products.index', 'uses' => 'ProductsController@index']);
 	Route::get('{url}', ['as' => 'products.show', 'uses' => 'ProductsController@show']);
 });
 
-Route::get('contact', function()
+Route::get('contact', function ()
 {
 	return View::make('contact');
 });
 
 /* Admin */
-Route::get('admin/{all}', ['as' => 'admin', 'uses' => 'AdminController@index']);
+Route::group(['prefix' => 'admin'], function ()
+{
+
+	Route::get('{all}', ['as' => 'admin', 'uses' => 'AdminController@index']);
+
+	Route::group(['prefix' => 'api'], function ()
+	{
+		Route::get('products', function ()
+		{
+			return '';
+		});
+	});
+});
+
 
