@@ -30,12 +30,19 @@ Route::get('contact', function ()
 /* Admin */
 Route::group(['prefix' => 'admin'], function ()
 {
-
+	/* API */
 	Route::group(['prefix' => 'api'], function ()
 	{
 		Route::group(['prefix' => 'products'], function(){
 			Route::get('', 'ProductsApiController@index');
 			Route::get('{id}', 'ProductsApiController@show');
+		});
+	});
+
+	/* Templates */
+	Route::group(['prefix' => 'templates'], function(){
+		Route::get('{name}', function($name){
+			return View::make('templates.'.$name);
 		});
 	});
 
