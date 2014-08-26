@@ -1,5 +1,4 @@
-<div class="container">
-    <form class="form-inline pull-right" role="form">
+	<form class="form-inline pull-right" role="form">
         <div class="form-group">
             <label class="sr-only" for="search">Search</label>
             <input type="text" ng-model="search" class="form-control" id="search" placeholder="Search">
@@ -16,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="product in products | filter:search">
+            <tr class="list" ng-repeat="product in products | filter:search">
                 <td>{{ product.name }}</td>
                 <td>{{ product.price | currency }}</td>
                 <td><img width="80" class="img-thumbnail" ng-src="{{ product.image }}" /></td>
@@ -28,4 +27,3 @@
             </tr>
         </tbody>
     </table>
-</div>

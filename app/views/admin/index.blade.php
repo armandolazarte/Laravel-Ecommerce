@@ -3,9 +3,14 @@
 
     <base href="/admin/" />
 
+    <!-- CSS Dependencies -->
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{{ asset('components/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css" media="all"/>
 	<link rel="stylesheet" href="{{ asset('components/fontawesome/css/font-awesome.min.css') }}" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{{ asset('components/animate.css/animate.css') }}" type="text/css" media="all"/>
+
+    <!-- Application CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/admin.css') }}" type="text/css" media="all"/>
 
     <!-- AngularJS dependencies -->
 	<script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
@@ -19,6 +24,7 @@
 	<script src="{{ asset('assets/js/app.js') }}"></script>
 	<script src="{{ asset('assets/js/directives.js') }}"></script>
 	<script src="{{ asset('assets/js/controllers.js') }}"></script>
+
 </head>
 <body>
 	<header>
@@ -45,7 +51,7 @@
 		</nav>
 	</header>
 	<main>
-		<div ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-view></div>
+        <div class="container" ng-view></div>
 	</main>
 </body>
 </html>

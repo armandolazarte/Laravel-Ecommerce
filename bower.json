@@ -8,6 +8,7 @@
     "angular-mocks": "~1.2.x",
     "restangular": "~1.4.0",
     "fontawesome": "~4.1.0",
-    "angular-animate": "~1.2.23"
+    "angular-animate": "~1.2.23",
+    "animate.css": "~3.2.0"
   }
 }
