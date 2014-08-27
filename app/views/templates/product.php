@@ -2,7 +2,7 @@
     <p>
         <a href="products" class="btn btn-info"><i class="fa fa-chevron-left"></i> Back to Product</a>
     </p>
-    <form class="form-horizontal" role="form">
+    <form ng-submit="save()" class="form-horizontal" role="form">
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
@@ -35,7 +35,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="submit" class="btn btn-primary" value="Submit">
             </div>
         </div>
     </form>

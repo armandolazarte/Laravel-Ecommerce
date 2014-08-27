@@ -36,5 +36,21 @@ class ProductsApiController extends \BaseController {
 	}
 
 
+	/**
+	 * Update a specified resource
+	 *
+	 * @param $id
+	 * @return bool
+	 */
+	public function put($id)
+	{
+		$input = Input::only('active', 'image', 'name', 'price', 'url');
+
+		$this->product->updateWithIdAndInput($id, $input);
+
+		return ['success' => true];
+	}
+
+
 
 }

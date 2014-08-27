@@ -49,7 +49,7 @@ class ProductRepository implements ProductRepositoryInterface{
 
     public function updateWithIdAndInput($id, array $input)
     {
-
+		$this->find($id)->update($input);
     }
 
     public function destroy($id)
