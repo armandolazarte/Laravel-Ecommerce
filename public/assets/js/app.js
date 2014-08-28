@@ -13,6 +13,9 @@ angular.module('eCommerce', [
 
     // Routing
     $routeProvider.when('/products', {templateUrl: 'templates/products', controller: 'ProductsCtrl'});
-    $routeProvider.when('/products/edit/:productId', {templateUrl: 'templates/product', controller: 'ProductsEditCtrl'});
+    $routeProvider.when('/products/edit/:productId', {
+        templateUrl: 'templates/product',
+        controller: 'ProductsEditCtrl'
+    });
     $routeProvider.otherwise({redirectTo: '/products'});
 }]);

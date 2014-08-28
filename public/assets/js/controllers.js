@@ -2,14 +2,14 @@
 
 /* Controllers */
 angular.module('eCommerce.controllers', [])
-    .controller('ProductsCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
+    .controller('ProductsCtrl', ['$scope', 'ajax', function ($scope, ajax) {
 
-        $scope.products = Restangular.all('products').getList().$object;
+        $scope.products = ajax.all('products').getList().$object;
     }])
-    .controller('ProductsEditCtrl', ['$scope', '$routeParams', 'Restangular', 'alert', function ($scope, $routeParams, Restangular, alert) {
+    .controller('ProductsEditCtrl', ['$scope', '$routeParams', 'ajax', 'alert', function ($scope, $routeParams, ajax, alert) {
         // Get product
         var productId = $routeParams.productId;
-        Restangular.one('products', productId).get().then(function(product){
+        ajax.one('products', productId).get().then(function(product){
             $scope.product = product;
         });
         // Save
