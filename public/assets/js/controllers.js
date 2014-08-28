@@ -5,7 +5,7 @@ angular.module('eCommerce.controllers', [])
     .controller('ProductsCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
         $scope.products = Restangular.all('products').getList().$object;
     }])
-    .controller('ProductsEditCtrl', ['$scope', '$routeParams', 'Restangular', function ($scope, $routeParams, Restangular) {
+    .controller('ProductsEditCtrl', ['$scope', '$routeParams', 'Restangular', 'alert', function ($scope, $routeParams, Restangular, alert) {
 
         // Get product
         var productId = $routeParams.productId;
@@ -17,7 +17,7 @@ angular.module('eCommerce.controllers', [])
             console.log($scope.product);
 
             $scope.product.put().then(function() {
-                alert('updated');
+                alert.add('Updated', 'success');
             });
         }
 

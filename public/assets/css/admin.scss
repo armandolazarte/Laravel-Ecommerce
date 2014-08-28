@@ -5,4 +5,10 @@ div[ng-view].ng-enter {
   animation: fadeInLeft 1s;
 }
 
+.alert{
+  position: absolute;
+  top:10px;
+  left:50%;
+  margin-left:-5%;
+}
 

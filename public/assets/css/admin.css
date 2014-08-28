@@ -3,3 +3,9 @@ div[ng-view].ng-enter {
   -moz-animation: fadeInLeft 1s;
   -ms-animation: fadeInLeft 1s;
   animation: fadeInLeft 1s; }
+
+.alert {
+  position: absolute;
+  top: 10;
+  left: 50%;
+  margin-left: -5%; }

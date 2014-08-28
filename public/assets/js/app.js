@@ -2,7 +2,7 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('eCommerce', [
-    'ngRoute', 'restangular', 'ngAnimate', 'eCommerce.controllers', 'eCommerce.directives'
+    'ngRoute', 'restangular', 'ngAnimate', 'ui.bootstrap', 'eCommerce.controllers', 'eCommerce.directives', 'eCommerce.services'
 ]).config(['$routeProvider', '$locationProvider', 'RestangularProvider', function ($routeProvider, $locationProvider, RestangularProvider) {
 
     // Enable HTML5 mode
