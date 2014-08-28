@@ -48,7 +48,7 @@ class ProductsApiController extends \BaseController {
 
 		$this->product->updateWithIdAndInput($id, $input);
 
-		return ['success' => true];
+		return ['msg' => 'Updated', 'type' => 'success'];
 	}
 
 

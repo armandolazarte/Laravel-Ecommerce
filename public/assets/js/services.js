@@ -8,10 +8,29 @@ angular.module('eCommerce.services', []).factory('alert', ['$rootScope', '$timeo
         $rootScope.alerts = [];
     };
 
+    var add = function (msg, type) {
+        $rootScope.alerts.push({msg: msg, type: type});
+        $timeout(clear, 2000);
+    };
+
     return {
-        add: function (msg, type) {
-            $rootScope.alerts.push({msg: msg, type: type});
-            $timeout(clear, 2000);
-        }
+        add: add,
+        addSuccess: function (msg) {
+            add(msg, 'success')
+        },
+        addInfo: function (msg) {
+            add(msg, 'info')
+        },
+        addWarning: function (msg) {
+            add(msg, 'warning')
+        },
+        addDanger: function (msg) {
+            add(msg, 'danger')
+        },
+        parse: function (obj) {
+            if (obj.msg && obj.type)
+                add(obj.msg, obj.type);
+        },
+        clear: clear
     };
 }]);
