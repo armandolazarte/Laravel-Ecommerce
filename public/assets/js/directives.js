@@ -11,6 +11,6 @@ angular.module('eCommerce.directives', []).
             },
             restrict: 'AE',
             replace: 'true',
-            template: '<div><button ng-show="active" class="btn btn-success">Active</span><span ng-show="!active" class="btn btn-default">Inactive</span></div>'
+            template: '<div><button ng-show="active!=0" class="btn btn-success">Active</button><button ng-show="active==0" class="btn btn-danger">Inactive</button></div>'
         };
     });

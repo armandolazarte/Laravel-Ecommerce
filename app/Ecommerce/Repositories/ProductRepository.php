@@ -32,7 +32,7 @@ class ProductRepository implements ProductRepositoryInterface{
 
 	public function create(array $attributes)
 	{
-
+		return $this->product->create($attributes);
 	}
 
     public function find($id)

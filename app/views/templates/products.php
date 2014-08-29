@@ -4,6 +4,13 @@
             <input type="text" ng-model="search" class="form-control" id="search" placeholder="Search">
         </div>
     </form>
+	<form class="form-inline" ng-submit="create()" role="form">
+		<div class="form-group">
+			<label class="sr-only" for="name">Product Name</label>
+			<input type="text" ng-model="product.name" class="form-control" required id="name" placeholder="Product Name">
+		</div>
+		<button type="submit" class="btn btn-success">Create</button>
+	</form>
     <table class="table table-striped table-hover table-condensed">
         <thead>
             <tr>

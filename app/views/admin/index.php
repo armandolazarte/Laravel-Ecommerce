@@ -55,7 +55,7 @@
 	</header>
 	<alert ng-repeat="alert in alerts" type="{{alert.type}}">{{alert.msg}}</alert>
 	<main>
-        <div class="container" ng-view></div>
+        <div class="container-fluid" ng-view></div>
 	</main>
 </body>
 </html>

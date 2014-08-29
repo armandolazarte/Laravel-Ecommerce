@@ -17,7 +17,29 @@ angular.module('eCommerce.controllers', [])
                 // Alert user
                 alert.parse(data);
             });
-        }
+        };
+
+        $scope.create = function () {
+
+            ajax.all('products').post($scope.product).then(function (data) {
+
+                if (!data.product) {
+
+                    alert.addDanger('Error occurred');
+
+                } else {
+
+                    // Add product to collection
+                    $scope.products.unshift(data.product);
+
+                    // Alert user
+                    alert.parse(data);
+                }
+
+
+            });
+
+        };
     }])
     .controller('ProductsEditCtrl', ['$scope', '$routeParams', 'ajax', 'alert', function ($scope, $routeParams, ajax, alert) {
         // Get product

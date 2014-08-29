@@ -42,7 +42,7 @@ class ProductsApiController extends \BaseController {
 	 * @param $id
 	 * @return bool
 	 */
-	public function put($id)
+	public function update($id)
 	{
 		$input = Input::only('active', 'image', 'name', 'price', 'url');
 
@@ -56,6 +56,15 @@ class ProductsApiController extends \BaseController {
 		$this->product->destroy($id);
 
 		return ['msg' => 'The product has been deleted.', 'type' => 'success'];
+	}
+
+	public function store()
+	{
+		$input = Input::only('name');
+
+		$product = $this->product->create($input);
+
+		return ['msg' => 'Product is created.', 'type' => 'success', 'product' => $product];
 	}
 
 
