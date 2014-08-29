@@ -51,6 +51,12 @@ class ProductsApiController extends \BaseController {
 		return ['msg' => 'Updated', 'type' => 'success'];
 	}
 
+	public function destroy($id)
+	{
+		$this->product->destroy($id);
+
+		return ['msg' => 'The product has been deleted.', 'type' => 'success'];
+	}
 
 
 }

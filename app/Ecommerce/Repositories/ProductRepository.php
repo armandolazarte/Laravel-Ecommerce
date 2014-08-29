@@ -54,7 +54,7 @@ class ProductRepository implements ProductRepositoryInterface{
 
     public function destroy($id)
     {
-
+		$this->find($id)->delete();
     }
 
 }

@@ -22,7 +22,7 @@
                 <td><hello-world active="{{ product.active }}"/> {{ product.active }}</td>
                 <td>
                     <a class="btn btn-primary" ng-href="products/edit/{{product.id}}"><i class="fa fa-pencil-square-o"></i> Edit</a>
-                    <a class="btn btn-danger" ng-href="products/edit/{{product.id}}"><i class="fa fa-trash-o"></i> Delete</a>
+                    <a class="btn btn-danger" ng-click="remove(product)"><i class="fa fa-trash-o"></i> Delete</a>
                 </td>
             </tr>
         </tbody>

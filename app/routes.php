@@ -37,6 +37,7 @@ Route::group(['prefix' => 'admin'], function ()
 			Route::get('', 'ProductsApiController@index');
 			Route::get('{id}', 'ProductsApiController@show');
 			Route::put('{id}', 'ProductsApiController@put');
+			Route::delete('{id}', 'ProductsApiController@destroy');
 		});
 	});
 
