@@ -28,9 +28,13 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="active" class="col-sm-2 control-label">Active</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="active" ng-model="product.active" placeholder="Active">
+            <div class="col-sm-10 col-sm-offset-2">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-checked="product.active == 1" ng-model="product.active" >
+						Active
+					</label>
+				</div>
             </div>
         </div>
         <div class="form-group">
