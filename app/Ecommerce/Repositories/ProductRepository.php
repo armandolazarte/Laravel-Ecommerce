@@ -29,7 +29,7 @@ class ProductRepository implements ProductRepositoryInterface {
 	{
 		$perPage = $perPage ? $perPage : $this->config->get('product.perPage');
 
-		return $this->product->paginate($perPage);
+		return $this->product->orderBy('order')->paginate($perPage);
 	}
 
 	public function create(array $attributes)
