@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration {
 			$table->string('image');
 			$table->decimal('price', 5, 2);
 			$table->integer('order')->default(0);
-			$table->integer('active')->default(1);
+			$table->integer('active')->default(0);
 			$table->timestamps();
 		});
 	}

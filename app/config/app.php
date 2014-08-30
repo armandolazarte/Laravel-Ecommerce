@@ -108,7 +108,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Ecommerce\Providers\ProductServiceProvider',
-		'Ecommerce\Providers\HtmlServiceProvider'
+		'Ecommerce\Providers\HtmlServiceProvider',
+		'Ecommerce\Url\UrlServiceProvider'
 	),
 
 	/*
