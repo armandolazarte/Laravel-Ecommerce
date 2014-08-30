@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin'], function ()
 	/* Templates */
 	Route::group(['prefix' => 'templates'], function(){
 		Route::get('{name}', function($name){
-			return View::make('templates.'.$name);
+			return View::make('admin.templates.'.$name);
 		});
 	});
 
