@@ -38,7 +38,7 @@ class ProductRepository implements ProductRepositoryInterface {
 		$product->url = UrlGenerator::generate($product);
 		$product->save();
 
-		return $product;
+		return $product->where('id', $product->id)->first();
 	}
 
 	public function find($id)
