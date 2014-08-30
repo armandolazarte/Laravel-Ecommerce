@@ -17,7 +17,7 @@ class ProductRepository implements ProductRepositoryInterface {
 
 	public function all($columns = array('*'))
 	{
-		return $this->product->all();
+		return $this->product->orderBy('order')->get();
 	}
 
 	public function newInstance(array $attributes = array())
@@ -36,6 +36,7 @@ class ProductRepository implements ProductRepositoryInterface {
 	{
 		$product = $this->product->fill($attributes);
 		$product->url = UrlGenerator::generate($product);
+		$product->image = asset('assets/images/logo.png');
 		$product->save();
 
 		return $product->where('id', $product->id)->first();
@@ -63,4 +64,14 @@ class ProductRepository implements ProductRepositoryInterface {
 		$this->find($id)->delete();
 	}
 
+	public function sort(Array $ids)
+	{
+		$count = 0;
+
+		foreach ($ids as $id)
+		{
+			$this->product->where('id', $id)->update(['order' => $count]);
+			$count++;
+		}
+	}
 }

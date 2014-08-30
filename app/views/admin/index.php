@@ -14,12 +14,14 @@
 
     <!-- AngularJS dependencies -->
 	<script src="<?php echo asset('components/jquery/dist/jquery.min.js') ?>"></script>
+	<script src="<?php echo asset('components/jquery-ui/jquery-ui.min.js') ?>"></script>
 	<script src="<?php echo asset('components/angular/angular.min.js') ?>"></script>
 	<script src="<?php echo asset('components/lodash/dist/lodash.underscore.js') ?>"></script>
 	<script src="<?php echo asset('components/restangular/dist/restangular.min.js') ?>"></script>
 	<script src="<?php echo asset('components/angular-route/angular-route.js') ?>"></script>
 	<script src="<?php echo asset('components/angular-animate/angular-animate.js') ?>"></script>
 	<script src="<?php echo asset('components/angular-bootstrap/ui-bootstrap.min.js') ?>"></script>
+	<script src="<?php echo asset('components/angular-ui-sortable/sortable.min.js') ?>"></script>
 	<script src="<?php echo asset('components/angular-bootstrap/ui-bootstrap-tpls.min.js') ?>"></script>
 
     <!-- Application specific -->

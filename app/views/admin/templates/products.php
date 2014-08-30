@@ -21,8 +21,8 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody>
-            <tr class="list" ng-repeat="product in products | filter:search">
+        <tbody ui-sortable="sortableOptions" ng-model="products.items">
+            <tr class="list" ng-repeat="product in products.items | filter:search">
                 <td>{{ product.name }}</td>
                 <td>{{ product.price | currency }}</td>
                 <td><img width="80" class="img-thumbnail" ng-src="{{ product.image }}" /></td>

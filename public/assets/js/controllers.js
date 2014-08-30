@@ -4,7 +4,13 @@
 angular.module('eCommerce.controllers', [])
     .controller('ProductsCtrl', ['$scope', 'ajax', 'alert', function ($scope, ajax, alert) {
 
-        $scope.products = ajax.all('products').getList().$object;
+        $scope.products = [];
+
+        ajax.all('products').getList().then(function (products) {
+
+            $scope.products.items = products;
+
+        });
 
         $scope.remove = function (product) {
 
@@ -12,12 +18,13 @@ angular.module('eCommerce.controllers', [])
             product.remove().then(function (data) {
 
                 // Remove product from view
-                $scope.products.splice($scope.products.indexOf(product), 1);
+                $scope.products.items.splice($scope.products.items.indexOf(product), 1);
 
                 // Alert user
                 alert.parse(data);
             });
         };
+
 
         $scope.create = function () {
 
@@ -30,7 +37,7 @@ angular.module('eCommerce.controllers', [])
                 } else {
 
                     // Add product to collection
-                    $scope.products.unshift(data.product);
+                    $scope.products.items.unshift(data.product);
 
                     // Alert user
                     alert.parse(data);
@@ -39,6 +46,20 @@ angular.module('eCommerce.controllers', [])
 
             });
 
+        };
+
+        $scope.sortableOptions = {
+            stop: function (e, ui) {
+                var ids = [];
+                angular.forEach($scope.products.items, function (value) {
+                    ids.push(value.id);
+                });
+
+                ajax.all('products').customPUT(ids, 'sort').then(function (data) {
+                    // Alert user
+                    alert.parse(data);
+                });
+            }
         };
     }])
     .controller('ProductsEditCtrl', ['$scope', '$routeParams', 'ajax', 'alert', function ($scope, $routeParams, ajax, alert) {

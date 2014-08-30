@@ -21,13 +21,14 @@ class ProductsApiController extends \BaseController {
 	public function index()
 	{
 		$items = $this->product->all();
+
 		return $items->toArray();
 	}
 
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  string  $id
+	 * @param  string $id
 	 * @return Response
 	 */
 	public function show($id)
@@ -65,6 +66,15 @@ class ProductsApiController extends \BaseController {
 		$product = $this->product->create($input);
 
 		return ['msg' => 'Product is created.', 'type' => 'success', 'product' => $product];
+	}
+
+	public function sort()
+	{
+		$input = Input::all();
+
+		$this->product->sort($input);
+
+		return ['msg' => 'The order is updated.', 'type' => 'success'];
 	}
 
 
