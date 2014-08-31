@@ -12,3 +12,4 @@ access_log
 .env.*
 .idea
 _ide_helper.php
+workbench
