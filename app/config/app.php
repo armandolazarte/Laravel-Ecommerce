@@ -111,7 +111,7 @@ return array(
 		'Ecommerce\Providers\HtmlServiceProvider',
 		'Ecommerce\Url\UrlServiceProvider',
 		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
-        'Way\Generators\GeneratorsServiceProvider'
+		'Way\Generators\GeneratorsServiceProvider'
 	),
 
 	/*
