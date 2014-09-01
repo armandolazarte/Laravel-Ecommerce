@@ -22,6 +22,11 @@ Route::group(array('prefix' => 'products'), function ()
 	Route::get('{url}', ['as' => 'products.show', 'uses' => 'ProductsController@show']);
 });
 
+Route::group(['prefix' => 'cart'], function ()
+{
+	Route::put('', ['as' => 'cart.add', 'uses' => 'CartController@add']);
+});
+
 Route::get('contact', function ()
 {
 	return View::make('contact');

@@ -109,7 +109,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Ecommerce\Providers\ProductServiceProvider',
 		'Ecommerce\Providers\HtmlServiceProvider',
-		'Ecommerce\Url\UrlServiceProvider'
+		'Ecommerce\Url\UrlServiceProvider',
+		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
 	),
 
 	/*
@@ -175,6 +176,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart'
 
 	),
 
