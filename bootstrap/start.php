@@ -24,14 +24,27 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+$env = $app->detectEnvironment(function()
+    {
+        $host = gethostname();
 
-	'local' => array('Liam-PC'),
-	'vagrant' => array('homestead'),
-	'work' => array('LIAM-PC'),
-	'hunter' => array('hunter')
+        switch ($host) {
+            case 'homestead':
+                $environment = 'vagrant';
+                break;
+            case 'LIAM-PC':
+                $environment = 'work';
+                break;
+            case 'hunter':
+                $environment = 'hunter';
+                break;
+            default:
+                $environment = 'local';
+        }
 
-));
+        return $environment;
+    }
+);
 
 /*
 |--------------------------------------------------------------------------

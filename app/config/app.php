@@ -110,7 +110,8 @@ return array(
 		'Ecommerce\Providers\ProductServiceProvider',
 		'Ecommerce\Providers\HtmlServiceProvider',
 		'Ecommerce\Url\UrlServiceProvider',
-		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
+		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
+        'Way\Generators\GeneratorsServiceProvider'
 	),
 
 	/*
