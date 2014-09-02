@@ -32,9 +32,6 @@ $env = $app->detectEnvironment(
 			case 'homestead':
 				$environment = 'vagrant';
 				break;
-			case 'LIAM-PC':
-				$environment = 'work';
-				break;
 			case 'hunter':
 				$environment = 'hunter';
 				break;
