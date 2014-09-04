@@ -1,8 +1,0 @@
-Ecommerce\Product:
-  name: $string
-  url: $string-$string
-  image: $string
-  price: $integer
-  order: $digit
-  active: 1
-

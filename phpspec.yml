@@ -1,6 +1,0 @@
-suites:
- ecommerce_suite:
-  namespace: Ecommerce
-  src_path: app
-  spec_path: app
-  spec_prefix: spec

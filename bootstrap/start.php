@@ -24,24 +24,7 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(
-	function () {
-		$host = gethostname();
-
-		switch ($host) {
-			case 'homestead':
-				$environment = 'vagrant';
-				break;
-			case 'hunter':
-				$environment = 'hunter';
-				break;
-			default:
-				$environment = 'local';
-		}
-
-		return $environment;
-	}
-);
+require __DIR__.'/environment.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +50,8 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 |
 */
 
-$framework = $app['path.base'].'/vendor/laravel/framework/src';
+$framework = $app['path.base'].
+	'/vendor/laravel/framework/src';
 
 require $framework.'/Illuminate/Foundation/start.php';
 
