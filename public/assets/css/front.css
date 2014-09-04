@@ -1,3 +1,10 @@
+/* NOTIFICATIONS */
+#notifications .alert {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  margin-left: -5%; }
+
 /* BUTTONS */
 .btn-birdieland {
   font: 300 12px/18px "Ubuntu", sans-serif;
@@ -82,7 +89,7 @@ body {
     body main .pagination-container {
       text-align: center; }
     body main .product-individual #qty {
-      width: 80px; }
+      width: 70px; }
     body main .product-individual #image-block {
       padding: 5px;
       border: 1px solid #dbdbdb;

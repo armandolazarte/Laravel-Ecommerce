@@ -117,6 +117,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
+		'Illuminate\Foundation\Providers\FormRequestServiceProvider',
 		/*
 		 * Project Service Providers...
 		 */

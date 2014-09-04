@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="{{ asset('components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 </head>
 <body>
+    @include('layouts.partials.notification')
 	<header>
 		<div class="container">
 			<div id="logo">
