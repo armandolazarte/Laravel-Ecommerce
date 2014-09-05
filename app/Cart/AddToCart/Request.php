@@ -1,8 +1,8 @@
-<?php namespace App\Cart\Requests;
+<?php namespace App\Cart\AddToCart;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AddToCartRequest extends FormRequest {
+class Request extends FormRequest {
 
 	public function rules()
 	{
