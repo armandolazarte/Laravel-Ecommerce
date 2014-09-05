@@ -19,6 +19,11 @@
   padding: 11px 18px 12px;
   text-align: center; }
 
+/* Mini Cart */
+#mini-cart {
+  margin-top: 20px;
+  text-align: right; }
+
 /* START */
 body {
   min-width: 320px;

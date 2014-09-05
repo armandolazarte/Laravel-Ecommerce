@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Product\Repositories\ProductRepositoryInterface;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\View;
 

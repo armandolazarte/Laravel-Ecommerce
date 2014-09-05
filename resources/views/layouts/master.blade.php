@@ -2,6 +2,7 @@
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{{ asset('components/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css" media="all"/>
+	<link rel="stylesheet" href="{{ asset('components/fontawesome/css/font-awesome.min.css') }}" type="text/css" media="all"/>
 	<link rel="stylesheet" href="{{ asset('assets/css/front.css') }}" type="text/css" media="all"/>
 
 	<script src="{{ asset('components/jquery/dist/jquery.min.js') }}"></script>
@@ -11,6 +12,7 @@
     @include('layouts.partials.notification')
 	<header>
 		<div class="container">
+            @include('layouts.partials.cart')
 			<div id="logo">
 				<a href="{{ url() }}"><img src="{{ asset('assets/images/logo.png') }}" /></a>
 			</div>
