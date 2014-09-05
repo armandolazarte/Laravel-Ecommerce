@@ -24,7 +24,10 @@ Route::group(array('prefix' => 'products'), function ()
 
 Route::group(['prefix' => 'cart'], function ()
 {
+	Route::get('', ['as' => 'cart.index', 'uses' => 'CartController@index']);
 	Route::put('', ['as' => 'cart.add', 'uses' => 'CartController@add']);
+	Route::delete('', ['as' => 'cart.delete', 'uses' => 'CartController@delete']);
+	Route::post('', ['as' => 'cart.update', 'uses' => 'CartController@update']);
 });
 
 Route::get('contact', function ()

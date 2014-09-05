@@ -36,13 +36,13 @@ body {
   background: #383a3d; }
   body header {
     background: white;
-    padding-bottom: 49px;
+    padding-bottom: 19px;
     border-bottom: 1px solid #ececec; }
     body header #logo {
       text-align: center;
-      margin-top: 40px; }
+      margin-top: 20px; }
     body header nav {
-      margin-top: 42px; }
+      margin-top: 22px; }
       @media (min-width: 768px) {
         body header nav.navbar-default {
           border-color: transparent;
@@ -93,8 +93,6 @@ body {
           font: normal 25px/29px "Ubuntu", sans-serif; }
     body main .pagination-container {
       text-align: center; }
-    body main .product-individual #qty {
-      width: 70px; }
     body main .product-individual #image-block {
       padding: 5px;
       border: 1px solid #dbdbdb;
@@ -115,3 +113,7 @@ body {
           font-size: 29px;
           line-height: 32px;
           color: #383a3d; }
+
+/* Cart */
+input.qty[type=number] {
+  width: 70px; }

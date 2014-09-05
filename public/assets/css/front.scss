@@ -44,14 +44,14 @@ body {
   background: #383a3d;
   header {
     background: white;
-    padding-bottom: 49px;
+    padding-bottom: 19px;
     border-bottom: 1px solid #ececec;
     #logo {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 20px;
     }
     nav {
-      margin-top: 42px;
+      margin-top: 22px;
       @media (min-width: $screen-sm-min) {
         &.navbar-default {
           border-color: transparent;
@@ -114,9 +114,6 @@ body {
       text-align: center;
     }
     .product-individual {
-      #qty {
-        width: 70px;
-      }
       #image-block {
         padding: 5px;
         border: 1px solid #dbdbdb;
@@ -144,4 +141,9 @@ body {
       }
     }
   }
+}
+
+/* Cart */
+input.qty[type=number]{
+  width:70px;
 }

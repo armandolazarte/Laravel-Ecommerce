@@ -13,7 +13,7 @@
 			{{ Form::open(['route' => 'cart.add', 'method' => 'put', 'class' => 'form-inline']) }}
                 <div class="form-group">
                     <label class="sr-only" for="qty">QTY</label>
-                    <input type="number" name="qty" required class="form-control" id="qty" placeholder="QTY">
+                    <input type="number" name="qty" required min="1" class="form-control qty" placeholder="QTY">
                     <input type="hidden" name="id" value="{{ $item->id }}" >
                 </div>
                 <button type="submit" class="btn btn-primary">Buy</button>
