@@ -2,9 +2,9 @@
 
 class UserRepo {
 
-	public function save($email, $password)
+	public function create($email, $password)
 	{
-		return User::create(['email' => $email, 'password' => $password]);
+		return User::register(get_defined_vars());
 	}
 
 

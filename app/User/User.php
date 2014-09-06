@@ -2,6 +2,7 @@
 
 use Illuminate\Contracts\Auth\Remindable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Model implements \Illuminate\Contracts\Auth\User, Remindable {
 
@@ -80,5 +81,24 @@ class User extends Model implements \Illuminate\Contracts\Auth\User, Remindable 
 	public function getRememberTokenName()
 	{
 		// TODO: Implement getRememberTokenName() method.
+	}
+
+	/**
+	 * Password must always be hashed
+	 *
+	 * @param $password
+	 */
+	public function setPasswordAttribute($password)
+	{
+		$this->attributes['password'] = Hash::make($password);
+	}
+
+	public static function register($data)
+	{
+		$user = new static($data);
+
+		$user->save();
+
+		return $user;
 	}
 }

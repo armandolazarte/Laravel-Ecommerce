@@ -24,6 +24,6 @@ class Handler implements CommandHandler{
 	 */
 	public function handle($command)
 	{
-		return $this->userRepo->save($command->email, $command->password);
+		return $this->userRepo->create($command->email, $command->password);
 	}
 }

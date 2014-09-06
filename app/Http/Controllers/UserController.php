@@ -4,6 +4,7 @@ use App\Http\ExecutableTrait;
 use App\User\UserRepo;
 use Illuminate\Routing\Controller;
 use App\User\Register\Request as RegisterRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 
@@ -31,6 +32,8 @@ class UserController extends Controller {
 	{
 
 		$user = $this->execute($request);
+
+		Auth::login($user);
 
 		return Redirect::home()->withSuccess('Welcome!');
 	}
