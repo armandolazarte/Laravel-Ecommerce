@@ -21,15 +21,15 @@ class AddToCartHandlerTest extends DbTestCase {
 	 */
 	public function it_should_add_product_to_cart()
 	{
-		$product = Factory::create('App\Product\Product')->toArray();
+		$product = Factory::create('App\Product\Product');
 
-		$command = $this->createCommand();
+		$command = $this->createCommand($product->id);
 
 		$this->handler->handle($command);
 
 		foreach (Cart::content() as $item)
 		{
-			$this->assertEquals($item->product->name, $product['name']);
+			$this->assertEquals($item->product->name, $product->name);
 		}
 
 	}
@@ -39,9 +39,9 @@ class AddToCartHandlerTest extends DbTestCase {
 	 */
 	public function it_should_update_product_if_same_product_exists()
 	{
-		$product = Factory::create('App\Product\Product')->toArray();
+		$product = Factory::create('App\Product\Product');
 
-		$command = $this->createCommand();
+		$command = $this->createCommand($product->id);
 
 		$this->handler->handle($command);
 		// Add same product to cart
@@ -53,10 +53,10 @@ class AddToCartHandlerTest extends DbTestCase {
 	/**
 	 * @return stdClass
 	 */
-	protected function createCommand()
+	protected function createCommand($id)
 	{
 		$command = new stdClass();
-		$command->id = 1;
+		$command->id = $id;
 		$command->qty = 1;
 
 		return $command;

@@ -1,4 +1,4 @@
-@extends('...layouts.master')
+@extends('layouts.master')
 
 @section('content')
 <div class="product-individual">
@@ -30,4 +30,5 @@
 			</div>
 		</div>
 	</div>
-	@stop
+</div>
+@stop

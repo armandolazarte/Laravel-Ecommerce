@@ -1,4 +1,4 @@
-@extends('...layouts.master')
+@extends('layouts.master')
 
 @section('content')
 {{ Form::open(['route'=>'product.store', 'class'=>'form-horizontal']) }}

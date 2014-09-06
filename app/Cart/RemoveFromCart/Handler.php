@@ -13,6 +13,6 @@ class Handler implements CommandHandler {
 	 */
 	public function handle($command)
 	{
-		Cart::remove($command->rowId);
+		Cart::remove($command->rowid);
 	}
 }

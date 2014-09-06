@@ -1,8 +1,7 @@
 <?php
 
-// Composer: "fzaninotto/faker": "v1.3.0"
+use App\Product\Product;
 use Faker\Factory as Faker;
-use Ecommerce\Product;
 
 class ProductsTableSeeder extends Seeder {
 

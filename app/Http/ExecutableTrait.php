@@ -12,7 +12,7 @@ trait ExecutableTrait {
 	{
 		$handler = $this->toCommandHandler($request);
 
-		$handler->handle((object) $request->all());
+		return $handler->handle((object) $request->all());
 	}
 
 	/**

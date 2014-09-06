@@ -1,4 +1,4 @@
-<?php namespace App\Cart\RemoveFromCart;
+<?php namespace App\Cart\UpdateCart;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -7,7 +7,8 @@ class Request extends FormRequest {
 	public function rules()
 	{
 		return [
-			'rowid' => 'required'
+			'item'   => 'required',
+			'action' => 'required'
 		];
 	}
 
@@ -15,5 +16,4 @@ class Request extends FormRequest {
 	{
 		return true;
 	}
-
 } 

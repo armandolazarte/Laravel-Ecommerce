@@ -16,6 +16,7 @@
           @foreach ($navs as $navItem)
             <li class="{{ $navItem->class }}"><a href="{{ url($navItem->url) }}">{{ $navItem->title }}</a></li>
           @endforeach
+          <li>{{ link_to_route('user.register', 'Sign Up') }}</li>
         </ul>
       </li>
     </ul>

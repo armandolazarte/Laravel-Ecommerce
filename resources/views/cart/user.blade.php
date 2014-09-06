@@ -1,7 +1,5 @@
 @extends('layouts.master')
 
 @section('content')
-    
-	<h1>You have arrived.</h1>
-
+    <h1>Registration</h1>
 @stop

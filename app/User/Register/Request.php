@@ -1,4 +1,4 @@
-<?php namespace App\Cart\RemoveFromCart;
+<?php namespace App\User\Register;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -7,7 +7,9 @@ class Request extends FormRequest {
 	public function rules()
 	{
 		return [
-			'rowid' => 'required'
+			'email' => 'required|email',
+			'password' => 'required|confirmed',
+			'password_confirmation' => 'required'
 		];
 	}
 
